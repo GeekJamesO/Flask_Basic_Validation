@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>basic form validation</title>
+    </head>
+    <body>
+        <form class="" action="/process" method="post">
+            <br>
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                {% for message in messages %}
+                    <p>{{message}}</p>
+                {% endfor %}
+                {% endif %}
+            {% endwith %}
+            <br>
+            <label for="name">Name: </label>
+            <input type="text" name="name" value="">
+            <br>
+            <button type="submit"><h4>Submit</h4></button>
+        </form>
+    </body>
+</html>
